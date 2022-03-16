@@ -13,7 +13,7 @@
 # 
 # Hint: Your network might work better if you scale the house price down. You don't have to give the answer 400...it might be better to create something that predicts the number 4, and then your answer is in the 'hundreds of thousands' etc.
 
-# In[8]:
+# In[12]:
 
 
 import tensorflow as tf
@@ -22,7 +22,7 @@ import keras
 import keras.utils
 
 
-# In[9]:
+# In[13]:
 
 
 # GRADED FUNCTION: house_model
@@ -32,7 +32,7 @@ def house_model():
     # Define input and output tensors with the values for houses with 1 up to 6 bedrooms
     # Hint: Remember to explictly set the dtype as float
     xs = np.array([1.0,2.0,3.0,4.0,5.0,6.0],dtype=float)
-    ys = np.array([100000.0,150000.0,200000.0,250000.0,300000.0,350000.0],dtype=float)
+    ys = np.array([1.0,1.5,2.0,2.5,3.0,3.5],dtype=float)
     
     # Define your model (should be a model with 1 dense layer and 1 unit)
     model = keras.Sequential([keras.layers.Dense(units = 1,input_shape=[1])])
@@ -51,7 +51,7 @@ def house_model():
 
 # Now that you have a function that returns a compiled and trained model when invoked, use it to get the model to predict the price of houses: 
 
-# In[10]:
+# In[14]:
 
 
 # Get your trained model
@@ -60,7 +60,7 @@ model = house_model()
 
 # Now that your model has finished training it is time to test it out! You can do so by running the next cell.
 
-# In[11]:
+# In[15]:
 
 
 new_y = 7.0
